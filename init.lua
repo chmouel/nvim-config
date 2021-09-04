@@ -45,7 +45,6 @@ require('appearance')
 require('plugins/telescope')
 require('plugins/nvim-cmp')
 require('plugins/nvim-lspconfig')
-require('plugins/vista')
 require('plugins/treesitter')
 require('plugins/barbar')
 

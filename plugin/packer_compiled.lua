@@ -132,10 +132,6 @@ _G.packer_plugins = {
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/chmouel/.local/share/nvim/site/pack/packer/start/vim-vsnip"
-  },
-  ["vista.vim"] = {
-    loaded = true,
-    path = "/home/chmouel/.local/share/nvim/site/pack/packer/start/vista.vim"
   }
 }
 
