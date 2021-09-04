@@ -9,6 +9,7 @@ opt.incsearch = true
 opt.hlsearch = false
 opt.swapfile = false          -- don't use swapfile
 opt.autochdir = true
+opt.smartcase = true
 
 -- highlight on yank
 exec([[

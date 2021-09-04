@@ -85,6 +85,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/chmouel/.local/share/nvim/site/pack/packer/start/dracula.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/chmouel/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/chmouel/.local/share/nvim/site/pack/packer/start/lualine.nvim"
