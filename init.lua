@@ -28,7 +28,6 @@ require('packer').startup(function()
     "hrsh7th/cmp-nvim-lsp";
     } 
   }
-  use 'liuchengxu/vista.vim';
   use 'terryma/vim-expand-region'
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -48,4 +47,5 @@ require('plugins/nvim-cmp')
 require('plugins/nvim-lspconfig')
 require('plugins/vista')
 require('plugins/treesitter')
+require('plugins/barbar')
 

@@ -69,6 +69,10 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/home/chmouel/.local/share/nvim/site/pack/packer/start/barbar.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/chmouel/.local/share/nvim/site/pack/packer/start/cmp-buffer"
