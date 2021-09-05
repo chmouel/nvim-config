@@ -22,12 +22,6 @@ require('packer').startup(function()
   use 'Mofiqul/dracula.nvim' -- theme
   use { 'hoob3rt/lualine.nvim',   requires = {'kyazdani42/nvim-web-devicons', opt = true} }
   use 'neovim/nvim-lspconfig'
-  use {
-    'lewis6991/gitsigns.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    },
-  }
   use { 'hrsh7th/nvim-cmp', requires = {
     "hrsh7th/vim-vsnip",
     "hrsh7th/cmp-buffer",
@@ -53,4 +47,3 @@ require('plugins/nvim-cmp')
 require('plugins/nvim-lspconfig')
 require('plugins/treesitter')
 require('plugins/barbar')
-require('plugins/gitsigns')
