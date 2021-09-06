@@ -7,3 +7,14 @@ map('i', '<leader>s', '<C-c>:w<CR>', default_opts)
 
 -- Close all windows and exit from neovim
 map('n', '<leader>q', ':qa<CR>', default_opts)
+
+---  Comment line
+map("n", "<leader>c", "gcc", {})
+
+-- Emacs alike in command line
+vim.cmd([[
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
+cnoremap <C-B>		<Left>
+cnoremap <C-F>		<Right>
+]])
