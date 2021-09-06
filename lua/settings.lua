@@ -31,12 +31,6 @@ opt.lazyredraw = true     -- faster scrolling
 opt.synmaxcol = 240       -- max column for syntax highlight
 
 -----------------------------------------------------------
--- Colorscheme
------------------------------------------------------------
-opt.termguicolors = true      -- enable 24-bit RGB colors
-cmd[[colorscheme default]]    -- set colorscheme
-
------------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
 opt.expandtab = true      -- use spaces instead of tabs

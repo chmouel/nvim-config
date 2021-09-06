@@ -22,6 +22,8 @@ require('packer').startup(function()
   use 'Mofiqul/dracula.nvim' -- theme
   use { 'hoob3rt/lualine.nvim',   requires = {'kyazdani42/nvim-web-devicons', opt = true} }
   use 'neovim/nvim-lspconfig'
+  use 'L3MON4D3/LuaSnip'
+  use 'abecodes/tabout.nvim'
   use { 'hrsh7th/nvim-cmp', requires = {
     "hrsh7th/vim-vsnip",
     "hrsh7th/cmp-buffer",

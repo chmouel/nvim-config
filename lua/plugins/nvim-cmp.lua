@@ -4,6 +4,7 @@
 
 -- Plugin: nvim-cmp
 --- https://github.com/hrsh7th/nvim-cmp
+require('luasnip/loaders/from_vscode').lazy_load()
 local cmp = require 'cmp'
 cmp.setup {
   mapping = {
@@ -12,6 +13,7 @@ cmp.setup {
   },
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'luasnip' },
     { name = 'path' },
     { name = 'buffer' },
   },
