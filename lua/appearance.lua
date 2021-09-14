@@ -5,7 +5,7 @@ local cmd = vim.cmd    		-- execute Vim commands
 -- Colorscheme
 -----------------------------------------------------------
 opt.termguicolors = true      -- enable 24-bit RGB colors
-cmd[[colorscheme dracula]]    -- set colorscheme
+cmd[[colorscheme doom-one]]    -- set colorscheme
 
 require('lualine').setup {
   options = {

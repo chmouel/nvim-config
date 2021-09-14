@@ -31,12 +31,17 @@ require('packer').startup(function()
     } 
   }
   use 'terryma/vim-expand-region'
+  use 'NTBBloodbath/doom-one.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
      run = ':TSUpdate'
-  }
-  use {'nvim-treesitter/nvim-treesitter-textobjects'}
+  };
+  use {'nvim-treesitter/nvim-treesitter-textobjects'};
   use 'romgrk/barbar.nvim';
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons'
+  };
 end)
 
 require('settings')
@@ -49,3 +54,4 @@ require('plugins/nvim-cmp')
 require('plugins/nvim-lspconfig')
 require('plugins/treesitter')
 require('plugins/barbar')
+require('plugins/tree')
