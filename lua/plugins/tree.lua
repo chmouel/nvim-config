@@ -9,7 +9,7 @@ local tree_cb = tree_c.nvim_tree_callback
 
 vim.api.nvim_set_keymap('n', '<leader>e', [[<cmd>lua require('nvim-tree').toggle()<CR>]], { noremap = true, silent = true })
 
-g.nvim_tree_ignore = {".git", "node_modules", ".cache"}
+g.nvim_tree_ignore = {".git", ".vscode", ".idea", "node_modules", ".cache"}
 
 g.nvim_tree_add_trailing = 1 -- append a trailing slash to folder names
 g.nvim_tree_auto_close = 1 -- closes tree when it's the last window
