@@ -24,6 +24,7 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'L3MON4D3/LuaSnip'
   use 'abecodes/tabout.nvim'
+  use 'ruanyl/vim-gh-line'
   use { 'hrsh7th/nvim-cmp', requires = {
     "hrsh7th/vim-vsnip",
     "hrsh7th/cmp-buffer",
@@ -49,3 +50,4 @@ require('plugins/nvim-cmp')
 require('plugins/nvim-lspconfig')
 require('plugins/treesitter')
 require('plugins/barbar')
+require('plugins/gh')
