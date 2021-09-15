@@ -11,6 +11,11 @@ map('n', '<leader>q', ':qa<CR>', default_opts)
 ---  Comment line
 map("n", "<leader>c", "gcc", {})
 
+--- Something i had in emacs for a while 
+--
+map("n", "<A-j>", "5gj", default_opts)
+map("n", "<A-k>", "5gk", default_opts)
+
 -- Emacs alike in command line
 vim.cmd([[
 cnoremap <C-A> <Home>
