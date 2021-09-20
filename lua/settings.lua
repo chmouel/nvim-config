@@ -13,6 +13,8 @@ opt.hlsearch = false
 opt.swapfile = false          -- don't use swapfile
 opt.autochdir = true
 opt.smartcase = true
+opt.clipboard = 'unnamedplus'
+opt.mouse = 'a'
 
 -- highlight on yank
 exec([[
