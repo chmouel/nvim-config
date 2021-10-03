@@ -15,6 +15,7 @@ opt.autochdir = true
 opt.smartcase = true
 opt.clipboard = 'unnamedplus'
 opt.mouse = 'a'
+opt.number = true
 
 -- highlight on yank
 exec([[
