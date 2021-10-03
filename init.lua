@@ -25,6 +25,7 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'abecodes/tabout.nvim'
   use 'ruanyl/vim-gh-line'
+  use 'axvr/org.vim'
   use { 'hrsh7th/nvim-cmp', requires = {
     "hrsh7th/vim-vsnip",
     "hrsh7th/cmp-buffer",
