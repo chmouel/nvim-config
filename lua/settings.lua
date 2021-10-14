@@ -16,6 +16,7 @@ opt.smartcase = true
 opt.clipboard = 'unnamedplus'
 opt.mouse = 'a'
 opt.number = true
+opt.inccommand = 'split'
 
 -- highlight on yank
 exec([[
