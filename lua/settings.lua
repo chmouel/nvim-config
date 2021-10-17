@@ -3,12 +3,20 @@ local cmd = vim.cmd    		-- execute Vim commands
 local exec = vim.api.nvim_exec 	-- execute Vimscript
 local g = vim.g      		-- global variables
 
+--- mapleader to space
+g.mapleader = " "
+
 --- settings
 opt.showmatch = true          -- highlight matching parenthesis
 opt.incsearch = true
 opt.hlsearch = false
 opt.swapfile = false          -- don't use swapfile
 opt.autochdir = true
+opt.smartcase = true
+opt.clipboard = 'unnamedplus'
+opt.mouse = 'a'
+opt.number = true
+opt.inccommand = 'split'
 
 -- highlight on yank
 exec([[
@@ -27,17 +35,12 @@ opt.lazyredraw = true     -- faster scrolling
 opt.synmaxcol = 240       -- max column for syntax highlight
 
 -----------------------------------------------------------
--- Colorscheme
------------------------------------------------------------
-opt.termguicolors = true      -- enable 24-bit RGB colors
-cmd[[colorscheme dracula]]    -- set colorscheme
-
------------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
 opt.expandtab = true      -- use spaces instead of tabs
 opt.shiftwidth = 4        -- shift 4 spaces when tab
 opt.tabstop = 4           -- 1 tab == 4 spaces
+opt.softtabstop = 4
 opt.smartindent = true    -- autoindent new lines
 
 -- 2 spaces for selected filetypes

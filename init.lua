@@ -22,20 +22,29 @@ require('packer').startup(function()
   use 'Mofiqul/dracula.nvim' -- theme
   use { 'hoob3rt/lualine.nvim',   requires = {'kyazdani42/nvim-web-devicons', opt = true} }
   use 'neovim/nvim-lspconfig'
+  use 'L3MON4D3/LuaSnip'
+  use 'abecodes/tabout.nvim'
+  use 'ruanyl/vim-gh-line'
+  use {'kevinhwang91/nvim-hlslens'}
+  use 'axvr/org.vim'
   use { 'hrsh7th/nvim-cmp', requires = {
     "hrsh7th/vim-vsnip",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-nvim-lsp";
     } 
   }
-  use 'liuchengxu/vista.vim';
   use 'terryma/vim-expand-region'
+  use 'NTBBloodbath/doom-one.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
      run = ':TSUpdate'
-  }
-  use {'nvim-treesitter/nvim-treesitter-textobjects'}
+  };
+  use {'nvim-treesitter/nvim-treesitter-textobjects'};
   use 'romgrk/barbar.nvim';
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons'
+  };
 end)
 
 require('settings')
@@ -46,6 +55,7 @@ require('appearance')
 require('plugins/telescope')
 require('plugins/nvim-cmp')
 require('plugins/nvim-lspconfig')
-require('plugins/vista')
 require('plugins/treesitter')
-
+require('plugins/barbar')
+require('plugins/gh')
+require('plugins/tree')
