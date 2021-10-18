@@ -20,7 +20,6 @@ require('packer').startup(function()
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use 'Mofiqul/dracula.nvim' -- theme
-  use { 'hoob3rt/lualine.nvim',   requires = {'kyazdani42/nvim-web-devicons', opt = true} }
   use 'neovim/nvim-lspconfig'
   use 'L3MON4D3/LuaSnip'
   use 'abecodes/tabout.nvim'
@@ -45,6 +44,26 @@ require('packer').startup(function()
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons'
   };
+
+  use {
+   "hoob3rt/lualine.nvim",
+    config = function()
+    require("lualine").setup {
+      options = {
+        theme = "github"
+      }
+    }
+    end
+  }
+  use {
+    "projekt0n/github-nvim-theme",
+    after = "lualine.nvim",
+    config = function()
+      require("github-theme").setup({
+        theme_style = "dark_default"
+      })
+   end
+  }
 end)
 
 require('settings')

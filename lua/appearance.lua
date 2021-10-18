@@ -1,16 +1,7 @@
-local opt = vim.opt        	-- global/buffer/windows-scoped options
-local cmd = vim.cmd    		-- execute Vim commands
+-- local colors = require('github-theme.colors').setup()
+-- require('github-theme').setup({
+--   sidebars = {"qf", "vista_kind", "terminal", "packer"},
 
------------------------------------------------------------
--- Colorscheme
------------------------------------------------------------
-opt.termguicolors = true      -- enable 24-bit RGB colors
-cmd[[colorscheme doom-one]]    -- set colorscheme
-
-require('lualine').setup {
-  options = {
-    theme = 'dracula',
-    icons_enabled = true,
-    extensions = {'nvim-tree'},
-  };
-}
+--   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+--   colors = {hint = "orange", error = "#ff0000"}
+-- })

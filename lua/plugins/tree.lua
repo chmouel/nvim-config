@@ -1,3 +1,7 @@
+vim.cmd([[
+  nnoremap <f10> :NvimTreeToggle<CR>
+]])
+
 require'nvim-tree'.setup {
   disable_netrw       = true,
   hijack_netrw        = true,
