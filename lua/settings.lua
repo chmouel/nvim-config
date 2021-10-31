@@ -15,7 +15,7 @@ opt.autochdir = true
 opt.smartcase = true
 opt.clipboard = 'unnamedplus'
 opt.mouse = 'a'
-opt.number = true
+opt.number = false
 opt.inccommand = 'split'
 
 -- highlight on yank
