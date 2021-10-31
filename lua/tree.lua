@@ -14,7 +14,7 @@ require'nvim-tree'.setup {
   auto_close          = true,
   open_on_tab         = false,
   hijack_cursor       = false,
-  update_cwd          = false,
+  update_cwd          = true,
   diagnostics         = {
     enable = true,
     icons = {
@@ -34,10 +34,10 @@ require'nvim-tree'.setup {
     args = {}
   },
   view = {
-    width = 30,
-    height = 30,
-    side = 'left',
-    auto_resize = false,
+    width = 15,
+    height = 15,
+    side = 'right',
+    auto_resize = true,
     mappings = {
       custom_only = false,
       list = {}
