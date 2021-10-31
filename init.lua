@@ -25,7 +25,13 @@ require('packer').startup(function()
   use 'abecodes/tabout.nvim'
   use 'ruanyl/vim-gh-line'
   use {'kevinhwang91/nvim-hlslens'}
-  use 'axvr/org.vim'
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {}
+    end
+  }
+    use 'axvr/org.vim'
   use { 'hrsh7th/nvim-cmp', requires = {
     "hrsh7th/vim-vsnip",
     "hrsh7th/cmp-buffer",
