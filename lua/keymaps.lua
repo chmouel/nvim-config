@@ -22,3 +22,11 @@ cnoremap <C-E> <End>
 cnoremap <C-B>		<Left>
 cnoremap <C-F>		<Right>
 ]])
+
+-- Alt arrow for moving around
+vim.cmd([[
+nnoremap <M-Up> <C-w><Up>
+nnoremap <M-Down> <C-w><Down>
+nnoremap <M-Left> <C-w><Left>
+nnoremap <M-Right> <C-w><Right>
+]])
