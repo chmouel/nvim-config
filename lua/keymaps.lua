@@ -3,7 +3,6 @@ local default_opts = {noremap = true, silent = true}
 
 -- fast saving with <leader> and s
 map('n', '<leader>s', ':w<CR>', default_opts)
-map('i', '<leader>s', '<C-c>:w<CR>', default_opts)
 
 -- Close all windows and exit from neovim
 map('n', '<leader>q', ':qa<CR>', default_opts)

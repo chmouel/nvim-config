@@ -13,12 +13,16 @@ opt.hlsearch = false
 opt.swapfile = false          -- don't use swapfile
 opt.autochdir = true
 opt.smartcase = true
+opt.clipboard = 'unnamedplus'
+opt.mouse = 'a'
+opt.number = false
+opt.inccommand = 'split'
 
 -- highlight on yank
 exec([[
   augroup YankHighlight
     autocmd!
-    autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
   augroup end
 ]], false)
 
