@@ -25,6 +25,7 @@ require('packer').startup(function()
   use 'abecodes/tabout.nvim'
   use 'ruanyl/vim-gh-line'
   use {'kevinhwang91/nvim-hlslens'}
+  use {'cespare/vim-toml'}
   use {
     "folke/which-key.nvim",
     config = function()
