@@ -24,7 +24,8 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'abecodes/tabout.nvim'
   use 'ruanyl/vim-gh-line'
-  use {'kevinhwang91/nvim-hlslens'}
+  use {'lukas-reineke/format.nvim'}
+  use {'LnL7/vim-nix'}
   use {
     "folke/which-key.nvim",
     config = function()
@@ -72,6 +73,7 @@ require('packer').startup(function()
   }
 end)
 
+
 require('settings')
 require('keymaps')
 require('appearance')
@@ -83,3 +85,4 @@ require('nvim-lspconfig')
 require('treesitter')
 require('barbar')
 require('tree')
+require('packages')
