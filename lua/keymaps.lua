@@ -13,6 +13,8 @@ map("n", "<A-j>", "5gj", default_opts)
 map("n", "<A-k>", "5gk", default_opts)
 
 map("n", "Y", "yy", default_opts)
+map("t", "<ESC>", "<C-\\><C-n>", default_opts)
+map("t", "<A-Left>", "<C-\\><C-n>:bp<CR>", default_opts)
 
 -- Emacs alike in command line
 vim.cmd([[
