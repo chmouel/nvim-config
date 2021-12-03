@@ -7,14 +7,12 @@ map('n', '<leader>s', ':w<CR>', default_opts)
 -- Close all windows and exit from neovim
 map('n', '<leader>q', ':qa<CR>', default_opts)
 
----  Comment line
-map("n", "<leader>c", "gcc", {})
-
 --- Something i had in emacs for a while 
 --
 map("n", "<A-j>", "5gj", default_opts)
 map("n", "<A-k>", "5gk", default_opts)
 
+map("n", "Y", "yy", default_opts)
 map("t", "<ESC>", "<C-\\><C-n>", default_opts)
 map("t", "<A-Left>", "<C-\\><C-n>:bp<CR>", default_opts)
 

@@ -24,6 +24,8 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'abecodes/tabout.nvim'
   use 'ruanyl/vim-gh-line'
+  use {'kevinhwang91/nvim-hlslens'}
+  use {'cespare/vim-toml'}
   use {'lukas-reineke/format.nvim'}
   use {'LnL7/vim-nix'}
   use {
