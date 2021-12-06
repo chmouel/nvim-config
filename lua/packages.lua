@@ -23,7 +23,4 @@ require 'format'.setup {
     }
 }
 
-vim.fn.execute([[
-  autocmd BufWritePre *.nix FormatWrite
-  autocmd BufWritePre *.lua FormatWrite
-]], false)
+vim.fn.execute([[autocmd BufWritePre *.nix FormatWrite]], false)
