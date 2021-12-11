@@ -24,6 +24,7 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'abecodes/tabout.nvim'
   use 'ruanyl/vim-gh-line'
+  use 'projekt0n/github-nvim-theme'
   use {'kevinhwang91/nvim-hlslens'}
   use {'cespare/vim-toml'}
   use {'lukas-reineke/format.nvim'}
@@ -53,28 +54,12 @@ require('packer').startup(function()
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons'
   };
-
+    -- statusline
   use {
-   "hoob3rt/lualine.nvim",
-    config = function()
-    require("lualine").setup {
-      options = {
-        theme = "github"
-      }
-    }
-    end
-  }
-  use {
-    "projekt0n/github-nvim-theme",
-    after = "lualine.nvim",
-    config = function()
-      require("github-theme").setup({
-        theme_style = "dark_default"
-      })
-   end
+    'famiu/feline.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
   }
 end)
-
 
 require('settings')
 require('keymaps')

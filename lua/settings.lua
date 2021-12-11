@@ -17,6 +17,7 @@ opt.clipboard = 'unnamedplus'
 opt.mouse = 'a'
 opt.number = false
 opt.inccommand = 'split'
+opt.termguicolors = true      -- enable 24-bit RGB colors
 
 -- highlight on yank
 exec([[
@@ -25,6 +26,9 @@ exec([[
     autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
   augroup end
 ]], false)
+
+-- colorscheme
+vim.cmd [[colorscheme github_dark_default]]
 
 -----------------------------------------------------------
 -- Memory, CPU
