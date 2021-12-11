@@ -19,6 +19,8 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- Package manager
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } , cond = function() return vim.fn.has('nvim-0.6') == 1 end }
+  use { 'junegunn/fzf', cond = function() return vim.fn.has('nvim-0.6') == 0 end }
+  use { 'junegunn/fzf.vim', cond = function() return vim.fn.has('nvim-0.6') == 0 end }
   use 'Mofiqul/dracula.nvim' -- theme
   use 'neovim/nvim-lspconfig'
   use 'L3MON4D3/LuaSnip'
@@ -66,7 +68,11 @@ require('keymaps')
 require('appearance')
 
 -- plugins
-require('telescope')
+if vim.fn.has('nvim-0.6') == 1 then
+  require('telescope')
+else
+  require('fzf')
+end
 require('nvim-cmp')
 require('nvim-lspconfig')
 require('treesitter')
