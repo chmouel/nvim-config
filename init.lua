@@ -73,3 +73,5 @@ require('treesitter')
 require('barbar')
 require('tree')
 require('packages')
+
+pcall(require, 'local')
