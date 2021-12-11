@@ -17,6 +17,7 @@ map("t", "<ESC>", "<C-\\><C-n>", default_opts)
 map("t", "<A-,>", "<C-\\><C-n>:bp<CR>", default_opts)
 map("t", "<A-.>", "<C-\\><C-n>:bn<CR>", default_opts)
 map("t", "<A-/>", "<C-\\><C-n><C-w><C-w><CR>", default_opts)
+map("t", "<C-w><C-w>", "<C-\\><C-n><C-w><C-w><CR>", default_opts)
 map("n", "<A-/>", "<C-w><C-w><CR>", default_opts)
 
 -- Emacs alike in command line
