@@ -28,6 +28,7 @@ require('packer').startup(function()
   use 'ruanyl/vim-gh-line'
   use 'projekt0n/github-nvim-theme'
   use {'kevinhwang91/nvim-hlslens'}
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   use {'cespare/vim-toml'}
   use {'lukas-reineke/format.nvim'}
   use {'LnL7/vim-nix'}
@@ -37,7 +38,7 @@ require('packer').startup(function()
       require("which-key").setup {}
     end
   }
-    use 'axvr/org.vim'
+  use 'axvr/org.vim'
   use { 'hrsh7th/nvim-cmp', requires = {
     "hrsh7th/vim-vsnip",
     "hrsh7th/cmp-buffer",
@@ -78,6 +79,6 @@ require('nvim-lspconfig')
 require('treesitter')
 require('barbar')
 require('tree')
-require('packages')
+require('autofmt')
 
 pcall(require, 'local')
