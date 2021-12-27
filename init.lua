@@ -16,6 +16,17 @@ vim.api.nvim_exec(
 
 local use = require('packer').use
 require('packer').startup(function()
+  use {
+        'RRethy/vim-hexokinase',
+        run = 'make hexokinase',
+        cmd = {"HexokinaseToggle"},
+        config = function()
+            vim.g.Hexokinase_highlighters = {'sign_column'}
+            vim.g.Hexokinase_optInPatterns = {
+                'full_hex', 'rgb', 'rgba', 'hsl', 'hsla'
+            }
+        end
+  }
   use 'wbthomason/packer.nvim' -- Package manager
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } , cond = function() return vim.fn.has('nvim-0.6') == 1 end }
