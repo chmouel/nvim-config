@@ -34,6 +34,7 @@ require('packer').startup(function()
   use { 'junegunn/fzf.vim', cond = function() return vim.fn.has('nvim-0.6') == 0 end }
   use 'Mofiqul/dracula.nvim' -- theme
   use 'neovim/nvim-lspconfig'
+  use 'dense-analysis/ale'
   use 'L3MON4D3/LuaSnip'
   use 'abecodes/tabout.nvim'
   use 'ruanyl/vim-gh-line'
