@@ -1,0 +1,15 @@
+snippet #!
+	#!/usr/bin/env bash
+	# Chmouel Boudjnah <chmouel@chmouel.com>
+	set -euxf
+
+snippet getopt!
+	while getopts "${0:opt}:" o; do
+			case "${o}" in
+				${0:opt})
+		   	        echo ${OPTARG};;
+				*)
+			        echo "Invalid option"; exit 1;;
+		esac
+	done
+	shift $((OPTIND-1))
