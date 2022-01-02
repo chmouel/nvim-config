@@ -17,6 +17,7 @@ vim.api.nvim_exec(
 local use = require('packer').use
 require('packer').startup(function()
   use 'famiu/bufdelete.nvim'
+  use 'dcampos/nvim-snippy'
   use {
     'RRethy/vim-hexokinase',
     run = 'make hexokinase',
