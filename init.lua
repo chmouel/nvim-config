@@ -17,23 +17,28 @@ vim.api.nvim_exec(
 local use = require('packer').use
 require('packer').startup(function()
   use {
-        'RRethy/vim-hexokinase',
-        run = 'make hexokinase',
-        cmd = {"HexokinaseToggle"},
-        config = function()
-            vim.g.Hexokinase_highlighters = {'sign_column'}
-            vim.g.Hexokinase_optInPatterns = {
-                'full_hex', 'rgb', 'rgba', 'hsl', 'hsla'
-            }
-        end
+    'RRethy/vim-hexokinase',
+    run = 'make hexokinase',
+    cmd = {"HexokinaseToggle"},
+  }
+  use {
+    'ntpeters/vim-better-whitespace'
   }
   use 'wbthomason/packer.nvim' -- Package manager
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
-  use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } , cond = function() return vim.fn.has('nvim-0.6') == 1 end }
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { 'nvim-lua/plenary.nvim' } ,
+    cond = function()
+      return vim.fn.has('nvim-0.6') == 1
+    end
+  }
   use { 'junegunn/fzf', cond = function() return vim.fn.has('nvim-0.6') == 0 end }
   use { 'junegunn/fzf.vim', cond = function() return vim.fn.has('nvim-0.6') == 0 end }
   use 'Mofiqul/dracula.nvim' -- theme
-  use 'neovim/nvim-lspconfig'
+  use {
+    'neovim/nvim-lspconfig',
+  }
   use 'dense-analysis/ale'
   use 'L3MON4D3/LuaSnip'
   use 'abecodes/tabout.nvim'
@@ -42,7 +47,7 @@ require('packer').startup(function()
   use {'kevinhwang91/nvim-hlslens'}
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   use {'cespare/vim-toml'}
-  use {'lukas-reineke/format.nvim'}
+  use {'lukas-reineke/format.nvim' }
   use {'LnL7/vim-nix'}
   use {
     "folke/which-key.nvim",
@@ -55,19 +60,23 @@ require('packer').startup(function()
     "hrsh7th/vim-vsnip",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-nvim-lsp";
-    } 
+    }
   }
   use 'terryma/vim-expand-region'
   use 'NTBBloodbath/doom-one.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
-     run = ':TSUpdate'
+     run = ':TSUpdate',
   };
-  use {'nvim-treesitter/nvim-treesitter-textobjects'};
-  use 'romgrk/barbar.nvim';
+  use {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+  };
+  use {
+    'romgrk/barbar.nvim',
+  };
   use {
     'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons'
+    requires = 'kyazdani42/nvim-web-devicons',
   };
     -- statusline
   use {
@@ -76,21 +85,18 @@ require('packer').startup(function()
   }
 end)
 
-require('settings')
-require('keymaps')
-require('appearance')
+require('init-settings')
+require('init-keymaps')
+require('init-appearance')
 
--- plugins
-if vim.fn.has('nvim-0.6') == 1 then
-  require('telescope')
-else
-  require('fzf')
-end
-require('nvim-cmp')
-require('nvim-lspconfig')
-require('treesitter')
-require('barbar')
-require('tree')
-require('autofmt')
+require('init-nvim-cmp')
+require('init-treesitter')
+require('init-barbar')
+require('init-tree')
+require('init-format')
+require('init-lspconfig')
+require('init-telescope')
+require('init-hexokinase')
+require('init-whitespace')
 
 pcall(require, 'local')
