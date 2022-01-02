@@ -23,10 +23,10 @@ opt.termguicolors = true      -- enable 24-bit RGB colors
 
 -- highlight on yank
 exec([[
-  augroup YankHighlight
-    autocmd!
-    autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
-  augroup end
+augroup YankHighlight
+autocmd!
+autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
+augroup end
 ]], false)
 
 -- colorscheme
@@ -51,7 +51,7 @@ opt.smartindent = true    -- autoindent new lines
 
 -- 2 spaces for selected filetypes
 cmd[[
-  autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
 ]]
 g.indentLine_char = '|'       -- set indentLine character
 cmd[[autocmd FileType markdown let g:indentLine_enabled=0]]
@@ -61,4 +61,4 @@ cmd[[autocmd FileType markdown let g:indentLine_enabled=0]]
 -----------------------------------------------------------
 opt.completeopt = 'menuone,noselect,noinsert' -- completion options
 opt.shortmess = 'c' 	-- don't show completion messages
- 
+

@@ -16,6 +16,7 @@ vim.api.nvim_exec(
 
 local use = require('packer').use
 require('packer').startup(function()
+  use 'famiu/bufdelete.nvim'
   use {
     'RRethy/vim-hexokinase',
     run = 'make hexokinase',
@@ -87,8 +88,8 @@ end)
 
 require('init-settings')
 require('init-keymaps')
-require('init-appearance')
 
+require('init-feline')
 require('init-nvim-cmp')
 require('init-treesitter')
 require('init-barbar')
