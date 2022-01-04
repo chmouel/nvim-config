@@ -1,6 +1,11 @@
 local map = vim.api.nvim_set_keymap
 local default_opts = {noremap = true, silent = true}
 
+vim.g.bufferline = {
+    auto_hide = true,
+    icons = false,
+}
+
 -- fast saving with <leader> and s
 map('n', '<leader>s', ':w<CR>', default_opts)
 
