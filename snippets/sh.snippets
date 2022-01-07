@@ -15,6 +15,6 @@ snippet getopt!
 	shift $((OPTIND-1))
 
 snippet tmp!
-    TMP=$(mktemp /tmp/.mm.XXXXXX)
-    clean() { rm -f ${TMP}; }
-    trap clean EXIT
+	TMP=$(mktemp /tmp/.mm.XXXXXX)
+	clean() { rm -f ${TMP}; }
+	trap clean EXIT
