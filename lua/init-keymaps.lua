@@ -12,6 +12,8 @@ map('n', '<leader>s', ':w<CR>', default_opts)
 -- Close all windows and exit from neovim
 map('n', '<leader>q', ':qa<CR>', default_opts)
 
+map('n',  '\\', ':FZF<CR>', default_opts)
+
 --- Something i had in emacs for a while
 --
 map("n", "<A-j>", "5gj", default_opts)

@@ -4,7 +4,7 @@ local exec = vim.api.nvim_exec 	-- execute Vimscript
 local g = vim.g      		-- global variables
 
 --- mapleader to space
-g.mapleader = " "
+g.mapleader = ","
 
 --- settings
 opt.showmatch = true          -- highlight matching parenthesis
@@ -13,10 +13,6 @@ opt.hlsearch = false
 opt.swapfile = false          -- don't use swapfile
 opt.autochdir = true
 opt.smartcase = true
---opt.clipboard = 'unnamedplus'
---if not vim.env.SSH_CLIENT then
---  opt.mouse = 'a'
---end
 opt.number = false
 opt.inccommand = 'split'
 opt.termguicolors = true      -- enable 24-bit RGB colors
