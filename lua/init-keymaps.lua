@@ -14,6 +14,9 @@ map('n', '<leader>q', ':qa<CR>', default_opts)
 
 map('n',  '\\', ':FZF<CR>', default_opts)
 
+map('v', '<A-w>', '"+y', default_opts)
+map('n', '<C-y>', '"+gP', default_opts)
+
 --- Something i had in emacs for a while
 --
 map("n", "<A-j>", "5gj", default_opts)
