@@ -29,9 +29,6 @@ autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", ti
 augroup end
 ]], false)
 
--- colorscheme
-vim.cmd [[colorscheme github_dark_default]]
-
 -----------------------------------------------------------
 -- Memory, CPU
 -----------------------------------------------------------

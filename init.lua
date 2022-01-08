@@ -26,6 +26,9 @@ require('packer').startup(function()
   use {
     'ntpeters/vim-better-whitespace'
   }
+  use {
+    'projekt0n/github-nvim-theme',
+  }
   use 'wbthomason/packer.nvim' -- Package manager
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
   use {
@@ -45,7 +48,6 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'abecodes/tabout.nvim'
   use 'ruanyl/vim-gh-line'
-  use 'projekt0n/github-nvim-theme'
   use {'kevinhwang91/nvim-hlslens'}
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   use {'cespare/vim-toml'}
@@ -65,7 +67,6 @@ require('packer').startup(function()
     }
   }
   use 'terryma/vim-expand-region'
-  use 'NTBBloodbath/doom-one.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
      run = ':TSUpdate',
@@ -100,5 +101,6 @@ require('init-lspconfig')
 require('init-telescope')
 require('init-hexokinase')
 require('init-whitespace')
+require('init-github-theme')
 
 pcall(require, 'local')
