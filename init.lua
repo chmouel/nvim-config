@@ -16,7 +16,7 @@ vim.api.nvim_exec(
 
 local use = require('packer').use
 require('packer').startup(function()
-  use 'famiu/bufdelete.nvim'
+  use 'karb94/neoscroll.nvim'
   use 'dcampos/nvim-snippy'
   use {
     'RRethy/vim-hexokinase',
@@ -78,11 +78,6 @@ require('packer').startup(function()
     'romgrk/barbar.nvim',
   };
   use {
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-  };
-    -- statusline
-  use {
     'famiu/feline.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
   }
@@ -95,12 +90,13 @@ require('init-feline')
 require('init-nvim-cmp')
 require('init-treesitter')
 require('init-barbar')
-require('init-tree')
+-- require('init-tree')
 require('init-format')
 require('init-lspconfig')
 require('init-telescope')
 require('init-hexokinase')
 require('init-whitespace')
 require('init-github-theme')
+require('init-neoscroll')
 
 pcall(require, 'local')
