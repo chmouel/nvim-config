@@ -30,6 +30,7 @@ require('packer').startup(function()
     'projekt0n/github-nvim-theme',
   }
   use 'wbthomason/packer.nvim' -- Package manager
+  use 'mhinz/vim-startify'
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
   use {
     'nvim-telescope/telescope.nvim',
