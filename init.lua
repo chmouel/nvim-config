@@ -50,7 +50,11 @@ require('packer').startup(function()
   use 'abecodes/tabout.nvim'
   use 'ruanyl/vim-gh-line'
   use {'kevinhwang91/nvim-hlslens'}
-  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons',
+    cond = function()
+      return vim.fn.has('nvim-0.6') == 1
+    end
+  }
   use {'cespare/vim-toml'}
   use {'lukas-reineke/format.nvim' }
   use {'LnL7/vim-nix'}
@@ -77,6 +81,9 @@ require('packer').startup(function()
   };
   use {
     'romgrk/barbar.nvim',
+    cond = function()
+      return vim.fn.has('nvim-0.6') == 1
+    end
   };
   use {
     'famiu/feline.nvim',
