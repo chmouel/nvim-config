@@ -4,7 +4,7 @@ local exec = vim.api.nvim_exec 	-- execute Vimscript
 local g = vim.g      		-- global variables
 
 --- mapleader to space
-g.mapleader = ","
+g.mapleader = " "
 
 --- settings
 opt.showmatch = true          -- highlight matching parenthesis
