@@ -19,9 +19,6 @@ map('n', '<C-y>', '"+gP', default_opts)
 
 --- Something i had in emacs for a while
 --
-map("n", "<A-j>", "5gj", default_opts)
-map("n", "<A-k>", "5gk", default_opts)
-
 map("n", "Y", "yy", default_opts)
 map("t", "<ESC>", "<C-\\><C-n>", default_opts)
 map("t", "<A-,>", "<C-\\><C-n>:bp<CR>", default_opts)

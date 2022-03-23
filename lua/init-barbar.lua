@@ -2,7 +2,6 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 -- Move to previous/next
-map('n', '<A-,>', ':BufferPrevious<CR>', opts)
 map('n', '<S-TAB>', ':BufferPrevious<CR>', opts)
 map('n', '<TAB>', ':BufferNext<CR>', opts)
 
@@ -20,20 +19,7 @@ map('n', '<leader>7', ':BufferGoto 7<CR>', opts)
 map('n', '<leader>8', ':BufferGoto 8<CR>', opts)
 map('n', '<leader>9', ':BufferGoto 9<CR>', opts)
 map('n', '<leader>0', ':BufferLast<CR>', opts)
--- Close buffer
 map('n', '<A-c>', ':BufferClose<CR>', opts)
--- Wipeout buffer
---                 :BufferWipeout<CR>
--- Close commands
---                 :BufferCloseAllButCurrent<CR>
---                 :BufferCloseBuffersLeft<CR>
---                 :BufferCloseBuffersRight<CR>
--- Magic buffer-picking mode
--- map('n', '<C-p>', ':BufferPick<CR>', opts)
--- Sort automatically by...
 map('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
 map('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
 map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
--- Other:
--- :BarbarEnable - enables barbar (enabled by default)
--- :BarbarDisable - very bad command, should never be used
