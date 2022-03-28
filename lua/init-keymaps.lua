@@ -31,8 +31,8 @@ map("n", "<A-/>", "<C-w><C-w><CR>", default_opts)
 vim.cmd([[
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
-cnoremap <C-B>		<Left>
-cnoremap <C-F>		<Right>
+cnoremap <C-B> <Left>
+cnoremap <C-F> <Right>
 ]])
 
 -- Alt arrow for moving around
@@ -41,4 +41,9 @@ nnoremap <M-Up> <C-w><Up>
 nnoremap <M-Down> <C-w><Down>
 nnoremap <M-Left> <C-w><Left>
 nnoremap <M-Right> <C-w><Right>
+]])
+
+-- Startify
+vim.cmd([[
+map <Leader>st :Startify<CR>
 ]])

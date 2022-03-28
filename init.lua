@@ -30,11 +30,39 @@ require('packer').startup(function()
     'projekt0n/github-nvim-theme',
   }
   use 'wbthomason/packer.nvim' -- Package manager
-  use 'mhinz/vim-startify'
+  use {
+    'mhinz/vim-startify',
+  }
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { 'nvim-lua/plenary.nvim' } ,
+    requires = {
+      {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope-project.nvim',
+      'nvim-telescope/telescope-symbols.nvim'
+    },
+    config = function()
+      require'telescope'.setup{
+        extensions = {
+          fzf = {
+            fuzzy = true,                    -- false will only do exact matching
+            override_generic_sorter = true,  -- override the generic sorter
+            override_file_sorter = true,     -- override the file sorter
+            case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+          },
+          project = {
+            base_dirs = {
+              {'~/GIT/go/src/github.com/chmouel', max_depth = 2},
+              {'~/GIT/go/src/github.com/openshift-pipelines', max_depth = 2},
+              {'~/GIT/go/src/github.com/tektoncd', max_depth = 2},
+            },
+          }
+        }
+      }
+      require'telescope'.load_extension('project')
+      require('telescope').load_extension('fzf')
+    end,
     cond = function()
       return vim.fn.has('nvim-0.6') == 1
     end
