@@ -44,6 +44,4 @@ nnoremap <M-Right> <C-w><Right>
 ]])
 
 -- Startify
-vim.cmd([[
-map <Leader>st :Startify<CR>
-]])
+map('n', '<Space>st', ':Startify<CR>', default_opts)

@@ -39,8 +39,10 @@ require('packer').startup(function()
     requires = {
       {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
       'nvim-lua/plenary.nvim',
+      "nvim-telescope/telescope-github.nvim",
       'nvim-telescope/telescope-project.nvim',
-      'nvim-telescope/telescope-symbols.nvim'
+      'nvim-telescope/telescope-symbols.nvim',
+      {'nvim-telescope/telescope-frecency.nvim', requires = {"tami5/sqlite.lua"}}
     },
     config = function()
       require'telescope'.setup{
@@ -61,7 +63,9 @@ require('packer').startup(function()
         }
       }
       require'telescope'.load_extension('project')
-      require('telescope').load_extension('fzf')
+      require'telescope'.load_extension('fzf')
+      require'telescope'.load_extension("frecency")
+      require('telescope').load_extension('gh')
     end,
     cond = function()
       return vim.fn.has('nvim-0.6') == 1
