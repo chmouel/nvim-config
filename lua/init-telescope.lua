@@ -8,5 +8,6 @@ vim.api.nvim_set_keymap('n', '<leader>sy', [[<cmd>lua require('telescope.builtin
 vim.api.nvim_set_keymap('n', '<leader>sG', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ss', [[<cmd>lua require('telescope.builtin').builtin()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>s;', [[<cmd>lua require('telescope.builtin').command_history()<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>s.', [[<cmd>lua require('telescope.builtin').fd()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap( 'n', '<leader>sp', ":lua require'telescope'.extensions.project.project{}<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap( 'n', '<leader>se', ":lua require'telescope.builtin'.symbols{ sources = {'emoji'} }<CR>", {noremap = true, silent = true})
