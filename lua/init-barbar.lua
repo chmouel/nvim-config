@@ -1,6 +1,12 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+vim.g.bufferline = {
+    auto_hide = true,
+    icons = false,
+    closable = false,
+}
+
 -- Move to previous/next
 map('n', '<S-TAB>', ':BufferPrevious<CR>', opts)
 map('n', '<TAB>', ':BufferNext<CR>', opts)

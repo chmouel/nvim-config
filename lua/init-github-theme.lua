@@ -13,8 +13,6 @@ require("github-theme").setup({
     return {
       htmlTag = {fg = c.red, bg = "#282c34", sp = c.hint, style = "underline"},
       DiagnosticHint = {link = "LspDiagnosticsDefaultHint"},
-      -- this will remove the highlight groups
-      TSField = {},
     }
   end
 })

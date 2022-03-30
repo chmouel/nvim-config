@@ -39,10 +39,13 @@ require('packer').startup(function()
     requires = {
       {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
       'nvim-lua/plenary.nvim',
-      "nvim-telescope/telescope-github.nvim",
       'nvim-telescope/telescope-project.nvim',
+      "nvim-telescope/telescope-file-browser.nvim",
       'nvim-telescope/telescope-symbols.nvim',
-      {'nvim-telescope/telescope-frecency.nvim', requires = {"tami5/sqlite.lua"}}
+      {
+        'nvim-telescope/telescope-frecency.nvim',
+        requires = { "tami5/sqlite.lua" }
+      }
     },
     config = function()
       require'telescope'.setup{
@@ -65,10 +68,10 @@ require('packer').startup(function()
           }
         }
       }
+      require"telescope".load_extension('file_browser')
       require'telescope'.load_extension('project')
       require'telescope'.load_extension('fzf')
       require'telescope'.load_extension("frecency")
-      require('telescope').load_extension('gh')
     end,
     cond = function()
       return vim.fn.has('nvim-0.6') == 1
@@ -81,7 +84,6 @@ require('packer').startup(function()
     'neovim/nvim-lspconfig',
   }
   use 'dense-analysis/ale'
-  use 'L3MON4D3/LuaSnip'
   use 'abecodes/tabout.nvim'
   use 'ruanyl/vim-gh-line'
   use {'kevinhwang91/nvim-hlslens'}
@@ -101,7 +103,6 @@ require('packer').startup(function()
   }
   use 'axvr/org.vim'
   use { 'hrsh7th/nvim-cmp', requires = {
-    "hrsh7th/vim-vsnip",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-nvim-lsp";
     }
