@@ -1,7 +1,7 @@
 vim.api.nvim_set_keymap( "n", "<space>fb", ":Telescope file_browser", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader><leader>", "<cmd>lua require('telescope').extensions.frecency.frecency()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-B>', [[<cmd>lua require('telescope.builtin').buffers({ignore_current_buffer = true, sort_last_used = true})<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>le', [[<cmd>lua require('telescope.builtin').diagnostics()<CR>]], { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>le', [[<cmd>lua require('telescope.builtin').diagnostics()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>sB', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>sd', [[<cmd>lua require('telescope.builtin').find_files({previewer = false})<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-f>', [[<cmd>lua require('telescope.builtin').git_files({previewer = false})<CR>]], { noremap = true, silent = true })
