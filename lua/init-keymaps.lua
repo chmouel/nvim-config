@@ -34,3 +34,6 @@ nnoremap <M-Right> <C-w><Right>
 
 -- Startify
 map('n', '<Space>st', ':Startify<CR>', default_opts)
+
+map('n', '<C-[>', '<cmd>ALEPrevious<CR>', default_opts)
+map('n', '<C-]>', '<cmd>ALENext<CR>', default_opts)
