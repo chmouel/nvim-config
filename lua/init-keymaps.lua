@@ -8,6 +8,8 @@ map('v', '<A-w>', '"+y', default_opts)
 map('n', '<C-y>', '"+gP', default_opts)
 map("n", "Y", "yy", default_opts)
 
+map("n", "<Leader>c", "<cmd>cd %:h<CR>", default_opts)
+
 --- terminal
 map("t", "<ESC>", "<C-\\><C-n>", default_opts)
 map("t", "<C-w><C-w>", "<C-\\><C-n><C-w><C-w><CR>", default_opts)
