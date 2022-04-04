@@ -59,13 +59,6 @@ require('packer').startup(function()
             override_file_sorter = true,     -- override the file sorter
             case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
           },
-          project = {
-            base_dirs = {
-              {'~/GIT/go/src/github.com/chmouel', max_depth = 2},
-              {'~/GIT/go/src/github.com/openshift-pipelines', max_depth = 2},
-              {'~/GIT/go/src/github.com/tektoncd', max_depth = 2},
-            },
-          }
         }
       }
       require"telescope".load_extension('file_browser')
