@@ -8,6 +8,8 @@ map('v', '<A-w>', '"+y', default_opts)
 map('n', '<C-y>', '"+gP', default_opts)
 map("n", "Y", "yy", default_opts)
 
+map("n", "<Leader>c", "<cmd>cd %:h<CR>", default_opts)
+
 --- terminal
 map("t", "<ESC>", "<C-\\><C-n>", default_opts)
 map("t", "<C-w><C-w>", "<C-\\><C-n><C-w><C-w><CR>", default_opts)
@@ -34,3 +36,6 @@ nnoremap <M-Right> <C-w><Right>
 
 -- Startify
 map('n', '<Space>st', ':Startify<CR>', default_opts)
+
+map('n', '<C-[>', '<cmd>ALEPrevious<CR>', default_opts)
+map('n', '<C-]>', '<cmd>ALENext<CR>', default_opts)

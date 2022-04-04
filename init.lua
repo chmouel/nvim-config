@@ -18,6 +18,7 @@ local use = require('packer').use
 require('packer').startup(function()
   use 'karb94/neoscroll.nvim'
   use 'dcampos/nvim-snippy'
+  use 'mg979/vim-visual-multi'
   use {
     'RRethy/vim-hexokinase',
     run = 'make hexokinase',
