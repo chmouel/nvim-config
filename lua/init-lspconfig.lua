@@ -30,10 +30,6 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'g[', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', 'g]', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 
-  vim.cmd([[
-    autocmd CursorHold <buffer> lua require('config.lsp').show_line_diagnostics()
-  ]])
-
   -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
     buf_set_keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
