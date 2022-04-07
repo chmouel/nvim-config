@@ -79,11 +79,7 @@ require('packer').startup(function()
   }
   use 'dense-analysis/ale'
   use 'abecodes/tabout.nvim'
-  use { 'ruanyl/vim-gh-line', config = function()
-        vim.api.nvim_exec([[
-        let g:gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
-        ]])
-  end}
+  use 'ruanyl/vim-gh-line'
   use {'kevinhwang91/nvim-hlslens'}
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons',
     cond = function()
