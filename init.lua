@@ -79,7 +79,6 @@ require('packer').startup(function()
   use 'dense-analysis/ale'
   use 'abecodes/tabout.nvim'
   use 'ruanyl/vim-gh-line'
-  use {'kevinhwang91/nvim-hlslens'}
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons',
     cond = function()
       return vim.fn.has('nvim-0.6') == 1
@@ -87,14 +86,12 @@ require('packer').startup(function()
   }
   use {'cespare/vim-toml'}
   use {'lukas-reineke/format.nvim' }
-  use {'LnL7/vim-nix'}
   use {
     "folke/which-key.nvim",
     config = function()
       require("which-key").setup {}
     end
   }
-  use 'axvr/org.vim'
   use { 'hrsh7th/nvim-cmp', requires = {
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-nvim-lsp";
