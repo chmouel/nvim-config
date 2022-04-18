@@ -1,11 +1,11 @@
 local M = {}
 
 function M.executable(name)
-  if vim.fn.executable(name) > 0 then
-    return true
-  end
+	if vim.fn.executable(name) > 0 then
+		return true
+	end
 
-  return false
+	return false
 end
 
 return M

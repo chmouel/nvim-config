@@ -1,11 +1,11 @@
 local map = vim.api.nvim_set_keymap
-local default_opts = {noremap = true, silent = true}
+local default_opts = { noremap = true, silent = true }
 
 -- Close all windows and exit from neovim
-map('n', '<leader>q', ':qa<CR>', default_opts)
+map("n", "<leader>q", ":qa<CR>", default_opts)
 
-map('v', '<A-w>', '"+y', default_opts)
-map('n', '<C-y>', '"+gP', default_opts)
+map("v", "<A-w>", '"+y', default_opts)
+map("n", "<C-y>", '"+gP', default_opts)
 map("n", "Y", "yy", default_opts)
 
 map("n", "<Leader>c", "<cmd>cd %:h<CR>", default_opts)
@@ -36,7 +36,7 @@ nnoremap <M-Right> <C-w><Right>
 ]])
 
 -- Startify
-map('n', '<Space>st', ':Startify<CR>', default_opts)
+map("n", "<Space>st", ":Startify<CR>", default_opts)
 
-map('n', '<C-[>', '<cmd>ALEPrevious<CR>', default_opts)
-map('n', '<C-]>', '<cmd>ALENext<CR>', default_opts)
+map("n", "<C-[>", "<cmd>ALEPrevious<CR>", default_opts)
+map("n", "<C-]>", "<cmd>ALENext<CR>", default_opts)
