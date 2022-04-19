@@ -98,10 +98,6 @@ require("packer").startup(function()
 	})
 	use({ "cespare/vim-toml" })
 	use({
-		"mhartington/formatter.nvim",
-		config = function() end,
-	})
-	use({
 		"folke/which-key.nvim",
 		config = function()
 			require("which-key").setup({})
@@ -142,7 +138,6 @@ require("init-nvim-cmp")
 require("init-treesitter")
 require("init-barbar")
 require("init-tree")
-require("init-format")
 require("init-lspconfig")
 require("init-telescope")
 require("init-hexokinase")
