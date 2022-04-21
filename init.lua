@@ -116,9 +116,6 @@ require("packer").startup(function()
 		"nvim-treesitter/nvim-treesitter-textobjects",
 	})
 	use({
-		"kyazdani42/nvim-tree.lua",
-	})
-	use({
 		"romgrk/barbar.nvim",
 		cond = function()
 			return vim.fn.has("nvim-0.6") == 1
@@ -137,7 +134,6 @@ require("init-feline")
 require("init-nvim-cmp")
 require("init-treesitter")
 require("init-barbar")
-require("init-tree")
 require("init-lspconfig")
 require("init-telescope")
 require("init-hexokinase")
