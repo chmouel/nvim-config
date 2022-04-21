@@ -5,6 +5,7 @@ local g = vim.g -- global variables
 
 --- mapleader to space
 g.mapleader = " "
+g.do_filetype_lua = 1
 
 --- settings
 opt.showmatch = true -- highlight matching parenthesis
@@ -16,6 +17,7 @@ opt.smartcase = true
 opt.number = false
 opt.inccommand = "split"
 opt.termguicolors = true -- enable 24-bit RGB colors
+opt.laststatus = 3
 
 -- highlight on yank
 exec(
@@ -52,8 +54,6 @@ autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth
 g.indentLine_char = "|" -- set indentLine character
 cmd([[autocmd FileType markdown let g:indentLine_enabled=0]])
 
------------------------------------------------------------
--- Autocompletion
------------------------------------------------------------
 opt.completeopt = "menuone,noselect,noinsert" -- completion options
+
 opt.shortmess = "cfilnxtToOFIS"
