@@ -6,6 +6,7 @@ local g = vim.g -- global variables
 --- mapleader to space
 g.mapleader = " "
 g.do_filetype_lua = 1
+g.netrw_banner = 0
 
 --- settings
 opt.showmatch = true -- highlight matching parenthesis

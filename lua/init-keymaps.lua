@@ -9,7 +9,7 @@ map("n", "<C-y>", '"+gP', default_opts)
 map("n", "Y", "yy", default_opts)
 
 map("n", "<Leader>c", "<cmd>cd %:h<CR>", default_opts)
-map("n", "<C-l>", "<cmd>e #<CR>", default_opts)
+map("n", "<C-l>", "<C-^>", default_opts)
 
 --- terminal
 map("t", "<ESC>", "<C-\\><C-n>", default_opts)
