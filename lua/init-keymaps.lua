@@ -40,3 +40,6 @@ map("n", "<Space>st", ":Startify<CR>", default_opts)
 
 map("n", "<C-[>", "<cmd>ALEPrevious<CR>", default_opts)
 map("n", "<C-]>", "<cmd>ALENext<CR>", default_opts)
+
+-- Replace
+map("n", "<leader>S", "<cmd>lua require('spectre').open()<CR>", default_opts)

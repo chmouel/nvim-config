@@ -24,6 +24,9 @@ require("packer").startup(function()
 		cmd = { "HexokinaseToggle" },
 	})
 	use({
+		"nvim-pack/nvim-spectre",
+	})
+	use({
 		"ntpeters/vim-better-whitespace",
 	})
 	use({
