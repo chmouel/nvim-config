@@ -11,6 +11,9 @@ map("n", "Y", "yy", default_opts)
 map("n", "<Leader>c", "<cmd>cd %:h<CR>", default_opts)
 map("n", "<C-l>", "<C-^>", default_opts)
 
+map("i", "jk", "<esc><cmd>:w<CR>", default_opts)
+map("n", "<Leader>w", "<cmd>:w<CR>", default_opts)
+
 --- terminal
 map("t", "<ESC>", "<C-\\><C-n>", default_opts)
 map("t", "<C-w><C-w>", "<C-\\><C-n><C-w><C-w><CR>", default_opts)
