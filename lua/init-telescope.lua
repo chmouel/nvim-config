@@ -50,7 +50,7 @@ vim.api.nvim_set_keymap(
 )
 vim.api.nvim_set_keymap(
 	"n",
-	"<C-S>",
+	"<leader><C-S>",
 	[[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>]],
 	{ noremap = true, silent = true }
 )
