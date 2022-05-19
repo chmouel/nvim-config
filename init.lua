@@ -143,5 +143,6 @@ require("init-hexokinase")
 require("init-whitespace")
 require("init-github-theme")
 require("init-neoscroll")
+require("init-incline")
 
 pcall(require, "local")
