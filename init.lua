@@ -17,6 +17,16 @@ vim.api.nvim_exec(
 local use = require("packer").use
 require("packer").startup(function()
 	use("karb94/neoscroll.nvim")
+	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
+	use({
+		"ur4ltz/surround.nvim",
+		config = function()
+			require("surround").setup({ mappings_style = "sandwich" })
+		end,
+	})
+	use({
+		"b0o/incline.nvim",
+	})
 	use("mg979/vim-visual-multi")
 	use({
 		"RRethy/vim-hexokinase",
