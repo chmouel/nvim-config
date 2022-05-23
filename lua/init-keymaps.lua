@@ -8,16 +8,20 @@ map("v", "<A-w>", '"+y', default_opts)
 map("n", "<C-y>", '"+gP', default_opts)
 map("n", "Y", "yy", default_opts)
 
+map("i", "<A-b>", "<C-o>b", default_opts)
+map("i", "<A-f>", "<C-o>e", default_opts)
+map("i", "<C-a>", "<C-o>I", default_opts)
+map("i", "<C-e>", "<C-o>A", default_opts)
+
 map("n", "<Leader>c", "<cmd>cd %:h<CR>", default_opts)
 map("n", "<C-l>", "<C-^>", default_opts)
 
-map("i", "jk", "<esc><cmd>:w<CR>", default_opts)
+map("i", "<C-s>", "<Esc>:w<CR>i", { noremap = true })
 map("n", "<Leader>w", "<cmd>:w<CR>", default_opts)
 
 --- terminal
 map("t", "<ESC>", "<C-\\><C-n>", default_opts)
 map("t", "<C-w><C-w>", "<C-\\><C-n><C-w><C-w><CR>", default_opts)
-
 -- Emacs alike in command line
 vim.cmd([[
 cnoremap <C-A> <Home>

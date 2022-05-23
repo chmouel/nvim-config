@@ -15,10 +15,12 @@ opt.hlsearch = false
 opt.swapfile = true -- don't use swapfile
 opt.autochdir = true
 opt.smartcase = true
-opt.number = false
 opt.inccommand = "split"
 opt.termguicolors = true -- enable 24-bit RGB colors
 opt.laststatus = 3
+
+opt.number = false
+opt.relativenumber = true
 
 -- highlight on yank
 exec(
@@ -49,11 +51,9 @@ opt.softtabstop = 4
 opt.smartindent = true -- autoindent new lines
 
 -- 2 spaces for selected filetypes
-cmd([[
-autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
-]])
+cmd([[ autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2 ]])
 g.indentLine_char = "|" -- set indentLine character
-cmd([[autocmd FileType markdown let g:indentLine_enabled=0]])
+cmd([[ autocmd FileType markdown let g:indentLine_enabled=0 ]])
 
 opt.completeopt = "menuone,noselect,noinsert" -- completion options
 

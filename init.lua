@@ -16,37 +16,23 @@ vim.api.nvim_exec(
 
 local use = require("packer").use
 require("packer").startup(function()
-	use("karb94/neoscroll.nvim")
+	use({ "karb94/neoscroll.nvim" })
 	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
-	use({
-		"ur4ltz/surround.nvim",
-		config = function()
-			require("surround").setup({ mappings_style = "sandwich" })
-		end,
-	})
-	use({
-		"b0o/incline.nvim",
-	})
-	use("mg979/vim-visual-multi")
+	use({ "tpope/vim-surround" })
+	use({ "bronson/vim-visual-star-search" })
+	use({ "b0o/incline.nvim" })
+	use({ "mg979/vim-visual-multi" })
 	use({
 		"RRethy/vim-hexokinase",
 		run = "make hexokinase",
 		cmd = { "HexokinaseToggle" },
 	})
-	use({
-		"nvim-pack/nvim-spectre",
-	})
-	use({
-		"ntpeters/vim-better-whitespace",
-	})
-	use({
-		"projekt0n/github-nvim-theme",
-	})
-	use("wbthomason/packer.nvim") -- Package manager
-	use({
-		"mhinz/vim-startify",
-	})
-	use("tpope/vim-commentary") -- "gc" to comment visual regions/lines
+	use({ "nvim-pack/nvim-spectre" })
+	use({ "ntpeters/vim-better-whitespace" })
+	use({ "projekt0n/github-nvim-theme" })
+	use({ "wbthomason/packer.nvim" }) -- Package manager
+	use({ "mhinz/vim-startify" })
+	use({ "tpope/vim-commentary" }) -- "gc" to comment visual regions/lines
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = {
@@ -95,13 +81,11 @@ require("packer").startup(function()
 			return vim.fn.has("nvim-0.6") == 0
 		end,
 	})
-	use("Mofiqul/dracula.nvim") -- theme
-	use({
-		"neovim/nvim-lspconfig",
-	})
-	use("dense-analysis/ale")
-	use("abecodes/tabout.nvim")
-	use("ruanyl/vim-gh-line")
+	use({ "Mofiqul/dracula.nvim" }) -- theme
+	use({ "neovim/nvim-lspconfig" })
+	use({ "dense-analysis/ale" })
+	use({ "abecodes/tabout.nvim" })
+	use({ "ruanyl/vim-gh-line" })
 	use({
 		"akinsho/bufferline.nvim",
 		requires = "kyazdani42/nvim-web-devicons",

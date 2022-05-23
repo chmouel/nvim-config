@@ -44,7 +44,7 @@ vim.api.nvim_set_keymap(
 )
 vim.api.nvim_set_keymap(
 	"n",
-	"<C-A-S>",
+	"<leader>ss",
 	[[<cmd>lua require('telescope.builtin').builtin({include_extensions = true })<CR>]],
 	{ noremap = true, silent = true }
 )
