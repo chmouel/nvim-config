@@ -17,6 +17,27 @@ vim.api.nvim_exec(
 local use = require("packer").use
 require("packer").startup(function()
 	use({ "karb94/neoscroll.nvim" })
+	use({
+		"abecodes/tabout.nvim",
+		config = function()
+			require("tabout").setup()
+		end,
+		wants = { "nvim-treesitter" },
+		after = { "nvim-cmp" },
+	})
+	use({
+		"cuducos/yaml.nvim",
+		requires = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-telescope/telescope.nvim",
+		},
+	})
+	use({
+		"akinsho/toggleterm.nvim",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
 	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
 	use({ "tpope/vim-surround" })
 	use({ "bronson/vim-visual-star-search" })
@@ -26,6 +47,15 @@ require("packer").startup(function()
 		"RRethy/vim-hexokinase",
 		run = "make hexokinase",
 		cmd = { "HexokinaseToggle" },
+	})
+	use({
+		"max397574/better-escape.nvim",
+		config = function()
+			require("better_escape").setup({
+				mapping = { "jj" },
+				timeout = 200,
+			})
+		end,
 	})
 	use({ "nvim-pack/nvim-spectre" })
 	use({ "ntpeters/vim-better-whitespace" })
@@ -84,7 +114,6 @@ require("packer").startup(function()
 	use({ "Mofiqul/dracula.nvim" }) -- theme
 	use({ "neovim/nvim-lspconfig" })
 	use({ "dense-analysis/ale" })
-	use({ "abecodes/tabout.nvim" })
 	use({ "ruanyl/vim-gh-line" })
 	use({
 		"akinsho/bufferline.nvim",
@@ -108,7 +137,12 @@ require("packer").startup(function()
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
+		requires = {
+			{ "windwp/nvim-ts-autotag" },
+			{ "p00f/nvim-ts-rainbow" },
+		},
 	})
+
 	use({
 		"nvim-treesitter/nvim-treesitter-textobjects",
 	})

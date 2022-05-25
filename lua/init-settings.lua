@@ -20,7 +20,7 @@ opt.termguicolors = true -- enable 24-bit RGB colors
 opt.laststatus = 3
 
 opt.number = false
-opt.relativenumber = true
+-- opt.relativenumber = true
 
 -- highlight on yank
 exec(
