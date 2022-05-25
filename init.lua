@@ -18,6 +18,13 @@ local use = require("packer").use
 require("packer").startup(function()
 	use({ "karb94/neoscroll.nvim" })
 	use({
+		"saecki/crates.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("crates").setup()
+		end,
+	})
+	use({
 		"abecodes/tabout.nvim",
 		config = function()
 			require("tabout").setup()
