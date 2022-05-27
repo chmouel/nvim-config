@@ -1,1 +1,1 @@
-# Moved to https://github.com/chmouel/nvim-config
+# Moved to https://gitlab.freedesktop.org/chmouel/nvim-config
